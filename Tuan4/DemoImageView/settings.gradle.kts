@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Bai1"
+rootProject.name = "Tuan4"
 include(":app")
  

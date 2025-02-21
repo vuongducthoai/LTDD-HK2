@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tuan4"
+    namespace = "com.example.bai1"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.tuan4"
+        applicationId = "com.example.bai1"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
