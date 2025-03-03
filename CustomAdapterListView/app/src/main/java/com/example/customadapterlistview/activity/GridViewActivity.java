@@ -1,4 +1,4 @@
-package com.example.customadapterlistview;
+package com.example.customadapterlistview.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +15,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.customadapterlistview.R;
+
 import java.util.ArrayList;
 
 public class GridViewActivity extends AppCompatActivity {
@@ -26,7 +28,6 @@ public class GridViewActivity extends AppCompatActivity {
     Button btnCapNhat;
     Button btnXoa;
     int viTri = -1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

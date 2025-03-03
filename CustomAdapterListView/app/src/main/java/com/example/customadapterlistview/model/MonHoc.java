@@ -1,6 +1,4 @@
-package com.example.customadapterlistview;
-
-import java.util.Objects;
+package com.example.customadapterlistview.model;
 
 public class MonHoc {
     private String name;

@@ -1,10 +1,12 @@
-package com.example.customadapterlistview;
+package com.example.customadapterlistview.activity;
 
 
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.customadapterlistview.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,7 +1,6 @@
-package com.example.customadapterlistview;
+package com.example.customadapterlistview.adapter;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
+import com.example.customadapterlistview.R;
+import com.example.customadapterlistview.model.UserModel;
 
 import java.util.List;
 
@@ -51,7 +51,7 @@ public class CustomAdapter  extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     return new TextViewHolder(itemView0);
                 case IMAGE:
                     View itemView1 = li.inflate(R.layout.row_image, parent, false);
-                    return new TextViewHolder(itemView1);
+                    return new ImageViewHolder(itemView1);
                 case USER:
                     View itemView2 = li.inflate(R.layout.row_user, parent, false);
                     return new UserViewHolder(itemView2);

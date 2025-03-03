@@ -1,4 +1,4 @@
-package com.example.customadapterlistview;
+package com.example.customadapterlistview.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,6 +9,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.customadapterlistview.R;
+import com.example.customadapterlistview.model.SongModel;
+
 import java.util.List;
 
 public class SongAdapter extends  RecyclerView.Adapter<SongAdapter.SongViewHolder>{

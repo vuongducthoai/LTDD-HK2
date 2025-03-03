@@ -1,10 +1,14 @@
-package com.example.customadapterlistview;
+package com.example.customadapterlistview.activity;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.customadapterlistview.R;
+import com.example.customadapterlistview.adapter.SongAdapter;
+import com.example.customadapterlistview.model.SongModel;
 
 import java.util.ArrayList;
 import java.util.List;

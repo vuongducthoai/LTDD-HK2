@@ -1,4 +1,4 @@
-package com.example.customadapterlistview;
+package com.example.customadapterlistview.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.customadapterlistview.R;
+import com.example.customadapterlistview.model.MonHoc;
+
 import java.util.List;
 
 public class MonHocAdapter extends BaseAdapter {

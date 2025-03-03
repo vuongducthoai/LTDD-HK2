@@ -1,4 +1,4 @@
-package com.example.customadapterlistview;
+package com.example.customadapterlistview.model;
 
 import java.io.Serializable;
 
