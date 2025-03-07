@@ -1,11 +1,11 @@
-package com.example.customadapterlistview.adapter;
+package com.example.customadapterlistview.activity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
+import android.widget.GridView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -14,13 +14,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.customadapterlistview.adapter.MonHocAdapter;
 import com.example.customadapterlistview.model.MonHoc;
 import com.example.customadapterlistview.R;
 
 import java.util.ArrayList;
 
-public class CustomAdapterListViewActivity extends AppCompatActivity {
-    ListView listView;
+public class CustomAdapterGridViewActivity extends AppCompatActivity {
+    GridView gridView;
     ArrayList<MonHoc> arrayList;
     MonHocAdapter adapter;
     EditText editText;
@@ -36,21 +37,21 @@ public class CustomAdapterListViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_customer_list_view);
+        setContentView(R.layout.grid_view);
 
         AnhXa();
 
-        adapter = new MonHocAdapter(CustomAdapterListViewActivity.this, R.layout.row_monhoc, arrayList);
-        //truyen du lieu tu adapter ra listView
-        listView.setAdapter(adapter);
+        adapter = new MonHocAdapter(CustomAdapterGridViewActivity.this, R.layout.row_monhoc_gridview, arrayList);
+        //truyen du lieu tu adapter ra gridView
+        gridView.setAdapter(adapter);
 
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
                 //code yêu cầu
                 //i: trả về vị trí click chuột ListView -> i ban đầu = 0
-                Toast.makeText(CustomAdapterListViewActivity.this, "Bạn đang nhấn giữ" + i + "-" + arrayList.get(i).getDesc(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(CustomAdapterGridViewActivity.this, "Bạn đang nhấn giữ" + i + "-" + arrayList.get(i).getDesc(), Toast.LENGTH_SHORT).show();
                 editText.setText(arrayList.get(i).getName());
                 monHoc = new MonHoc(arrayList.get(i));
                 viTri = i;
@@ -99,7 +100,7 @@ public class CustomAdapterListViewActivity extends AppCompatActivity {
     }
 
     private void AnhXa(){
-        listView = (ListView)findViewById(R.id.listView1);
+        gridView = (GridView) findViewById(R.id.gridview1);
         editText  = (EditText)findViewById(R.id.editText1);
         btnThem = (Button)findViewById(R.id.btnNhap);
         btnCapNhat = (Button)findViewById(R.id.btnCapNhat);

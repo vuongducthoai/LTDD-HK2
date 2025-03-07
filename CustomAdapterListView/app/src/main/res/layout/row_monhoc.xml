@@ -40,3 +40,6 @@
             app:layout_constraintTop_toBottomOf="@id/textName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--Layout hiển thị cho từng Item trong ListView-->

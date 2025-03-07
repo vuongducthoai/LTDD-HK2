@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.customadapterlistview.adapter.CustomAdapterListViewActivity"
+        <activity android:name="com.example.customadapterlistview.activity.CustomAdapterListViewActivity"
             android:exported="true" />
 
         <activity android:name="com.example.customadapterlistview.activity.ListViewActivity"
@@ -31,7 +31,7 @@
         <activity android:name="com.example.customadapterlistview.activity.GridViewActivity"
             android:exported="true" />
 
-        <activity android:name="com.example.customadapterlistview.adapter.CustomAdapterGridViewActivity"
+        <activity android:name="com.example.customadapterlistview.activity.CustomAdapterGridViewActivity"
             android:exported="true" />
 
         <activity android:name="com.example.customadapterlistview.activity.RecycleViewActivity"

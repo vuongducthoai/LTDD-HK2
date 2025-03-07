@@ -1,5 +1,8 @@
 package com.example.customadapterlistview.model;
 
+/*
+    Tạo một class MonHoc de luu tru du lieu cho moi item trên listView.
+ */
 public class MonHoc {
     private String name;
     private String desc;

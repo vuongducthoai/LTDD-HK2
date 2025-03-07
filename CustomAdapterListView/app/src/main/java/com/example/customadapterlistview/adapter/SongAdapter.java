@@ -17,9 +17,9 @@ import java.util.List;
 
 public class SongAdapter extends  RecyclerView.Adapter<SongAdapter.SongViewHolder>{
     private static final String  TAG = "SongAdapter";
-    private List<SongModel> mSongs;
-    private Context mContext;
-    private LayoutInflater mLayoutInflater;
+    private List<SongModel> mSongs; // Danh sach các bai hat
+    private Context mContext; // Ngu canh cua ung dung
+    private LayoutInflater mLayoutInflater; // Doi tuong ho tro tao view tu XML
 
 
     public SongAdapter(Context context, List<SongModel> datas){

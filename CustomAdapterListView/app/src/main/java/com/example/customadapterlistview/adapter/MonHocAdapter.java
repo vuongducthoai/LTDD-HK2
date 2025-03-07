@@ -13,12 +13,15 @@ import com.example.customadapterlistview.model.MonHoc;
 
 import java.util.List;
 
-public class MonHocAdapter extends BaseAdapter {
+//Adapter này kế thừa từ BaseAdapter. Adapter này sẽ chuyển đổi mỗi đối tượng
+//dữ liệu thành một view tương ứng trong ListView.
+//(Adapter - Cầu nối dữ liệu với giao diện)
+//Lam nhiệm vụ kết nối dữ lệu từ danh sách ArrayList<MonHoc> vào listView.
+public class MonHocAdapter extends  BaseAdapter {
     //khai bao
-    private Context context;
-    private int layout;
-    private List<MonHoc> monHocList;
-
+    private Context context; // Doi tuong Context, dung de truy cap tai nguyen ung dung
+    private int layout; // ID cua layout XML dung de hien thi tung item trong ListView.
+    private List<MonHoc> monHocList; // Danh sach cac mon hoc (List<MonHoc>), chinh la du lieu can hien thi.
 
     public MonHocAdapter(Context context, int layout, List<MonHoc> monHocList){
         this.context = context;
@@ -27,6 +30,7 @@ public class MonHocAdapter extends BaseAdapter {
     }
 
 
+    //Tra ve so luong phan tu trong danh sach monHocList (so luong mon hoc can hien thi).
     @Override
     public int getCount() {
        return monHocList.size();
@@ -34,20 +38,26 @@ public class MonHocAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return monHocList.get(position);
     }
 
+
+    //Tra ve ID tuong ung voi vi tri cua moi item
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
 
 
-    static class  ViewHolder {
+
+    //ViewHolder giup luu tru cac thanh phan giao dien (TextView, ImageView) cua moi item
+    // trong ListView, giup tang hieu suat bang cach tránh viec goi findViewById() nhieu lan
+    static class ViewHolder {
         TextView textName, textDesc;
         ImageView imagePic;
     }
 
+    //Phuong thuc duoc goi khi ListView can ve mot item
     @Override
     public View getView(int i, View view, ViewGroup parent) {
         //Khoi tao viewHolder
@@ -55,7 +65,6 @@ public class MonHocAdapter extends BaseAdapter {
         //lay context
         if(view == null){
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
             //Goi view chua layout
             view = inflater.inflate(layout, null);
 
@@ -68,7 +77,7 @@ public class MonHocAdapter extends BaseAdapter {
         } else {
             viewHolder = (ViewHolder) view.getTag();
         }
-        //gan gia tri
+        //gan gia tri cho item
         MonHoc monHoc = monHocList.get(i);
         viewHolder.textName.setText(monHoc.getName());
         viewHolder.textDesc.setText(monHoc.getDesc());
