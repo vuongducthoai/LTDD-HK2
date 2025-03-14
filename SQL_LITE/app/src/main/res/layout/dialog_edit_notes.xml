@@ -60,10 +60,12 @@
         android:id="@+id/buttonHuy"
         android:layout_width="126dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="60dp"
         android:text="Hủy"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonEdit"
         app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,5 +33,4 @@ public class DatabaseHandler2 extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
-
 }
