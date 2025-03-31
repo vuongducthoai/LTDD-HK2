@@ -17,12 +17,12 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyViewHolder>{
+public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHolder>{
     Context context;
-    List<Category> array;
-    public CategoryAdapter(Context context, List<Category> array){
+    List<Product> productList;
+    public ProductAdapter(Context context, List<Product> array){
         this.context = context;
-        this.array = array;
+        this.productList = array;
     }
 
     @NonNull
@@ -40,13 +40,13 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
         public MyViewHolder(@NotNull View itemView){
             super(itemView);
             images = (ImageView) itemView.findViewById(R.id.image_cate);
-            tenSp = (TextView) itemView.findViewById(R.id.tvNameCategory);
+            tenSp = (TextView) itemView.findViewById(R.id.tvNameProduct);
             //bat su kien cho item holder trong MyViewHolder
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     //xu ly khi nhan vao tren category
-                    Toast.makeText(context, "Bạn đã chọn category" + tenSp.getText().toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "" + tenSp.getText().toString(), Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -54,17 +54,22 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyView
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        Category category = array.get(position);
-        holder.tenSp.setText(category.getName());
+        Product product = productList.get(position);
+        holder.tenSp.setText(product.getName());
 
         //load anh voi Glide
         Glide.with(context)
-                .load(category.getImages())
+                .load(product.getThumbnail())
                 .into(holder.images);
     }
 
     @Override
     public int getItemCount() {
-        return array == null ? 0 : array.size();
+        return productList == null ? 0 : productList.size();
+    }
+
+    public void updateList(List<Product> newList) {
+        this.productList = newList;
+        notifyDataSetChanged();
     }
 }

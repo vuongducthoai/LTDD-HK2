@@ -8,7 +8,7 @@ public class RetrofitClient {
     public static Retrofit getRetrofit(){
         if(retrofit == null){
             retrofit = new Retrofit.Builder()
-                    .baseUrl("http://app.iotstar.vn:8081/appfoods/")
+                    .baseUrl("http://10.0.2.2:8088/api/v1/products/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }

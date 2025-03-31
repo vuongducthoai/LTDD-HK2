@@ -15,18 +15,21 @@
             android:orientation="vertical">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rc_category"
+                    android:id="@+id/rc_product"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="16dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="abc"
-                    android:layout_gravity="center"/>
-
+                <EditText
+                    android:id="@+id/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="8dp"
+                    android:hint="Search"
+                    android:paddingStart="40dp"
+                    android:textSize="16sp"
+                    android:inputType="text"/>
         </LinearLayout>
 </androidx.core.widget.NestedScrollView>
