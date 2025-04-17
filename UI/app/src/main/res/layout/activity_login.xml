@@ -5,18 +5,19 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Login">
+    tools:context=".Activity.Login">
         <!--wrap content: chieu rong cua view se vua du de chua noi dung ben trong no  -->
         <!--wrap_parent: Chieu rong keo gian het muc co the trong layout cha    -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="Sign In"
-        android:textSize = "30sp"
-        android:textStyle="bold"
         android:textColor="#000000"
-        />
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,7 +71,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:padding="10dp"
-            android:src="@drawable/password_show"
+            android:src="@drawable/password_hide"
             android:adjustViewBounds="true"
             android:layout_marginEnd="20dp"
             />
@@ -144,6 +145,7 @@
         android:background="@drawable/round_back_dark_blue5_15">
 
         <ImageView
+            android:id="@id/google_btn"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_centerVertical="true"

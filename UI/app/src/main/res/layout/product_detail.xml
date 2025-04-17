@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- FrameLayout để hiển thị ViewPager2 và overlay các nút Previous và Next -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+
+        <!-- ViewPager2 để hiển thị ảnh chính -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/mainImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="centerInside" />
+
+        <!-- Nút Previous -->
+        <ImageButton
+            android:id="@+id/prevButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="start|center_vertical"
+            android:background="@android:color/transparent"
+            android:src="@drawable/previous"
+            android:scaleType="centerInside" />
+
+        <!-- Nút Next -->
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="@android:color/transparent"
+            android:src="@drawable/next"
+            android:scaleType="centerInside" />
+    </FrameLayout>
+
+    <!-- RecyclerView để hiển thị các thumbnail -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal" />
+</LinearLayout>

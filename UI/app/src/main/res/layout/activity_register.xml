@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Register">
+    tools:context=".Activity.Register">
     <!--wrap content: chieu rong cua view se vua du de chua noi dung ben trong no  -->
     <!--wrap_parent: Chieu rong keo gian het muc co the trong layout cha    -->
     <TextView
@@ -41,6 +41,21 @@
         android:paddingEnd="20dp" />
 
     <EditText
+        android:id="@+id/phoneET"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round_back_dark_blue5_15"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp" />
+
+    <EditText
         android:id="@+id/emailET"
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -51,24 +66,9 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:maxLines="1"
-        android:textSize="16sp"
         android:paddingStart="20dp"
-        android:paddingEnd="20dp" />
-
-    <EditText
-        android:id="@+id/mobileET"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/round_back_dark_blue5_15"
-        android:hint="Mobile"
-        android:inputType="phone"
-        android:maxLines="1"
-        android:textSize="16sp"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp" />
+        android:paddingEnd="20dp"
+        android:textSize="16sp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
