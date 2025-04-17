@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "360846218547",
+    "project_id": "myvideoapp-f365e",
+    "storage_bucket": "myvideoapp-f365e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:360846218547:android:aa8ac853ddcd64b1889a46",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2aOrbZhx1d4bBakmXxYa83JFepPkLkj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
